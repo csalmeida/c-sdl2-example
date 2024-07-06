@@ -4,6 +4,10 @@ CC       := gcc
 # Set compiler flags:
 C_FLAGS := `sdl2-config --cflags` -ggdb3 -O0 --std=c99 -Wall
 
+# The file name to be compiled.
+# Changes executable name:
+FILE_NAME := main
+
 # bin is where executables are saved to.
 # src is where source code is located.
 BIN     := bin
@@ -15,7 +19,7 @@ LIBRARY_PATHS = lib
 
 # Specify the libraries being used:
 LIBRARIES   := -lSDL2 -lSDL2_image  # Don't forget that -l is the option
-EXECUTABLE  := main
+EXECUTABLE  := $(FILE_NAME)
 SOURCES := $(shell find $(SRC) -name "*.c") # Finds files to compile.
 
 .PHONY: clean all
@@ -27,7 +31,7 @@ all: $(BIN)/$(EXECUTABLE)
 run: clean all
 	./$(BIN)/$(EXECUTABLE)
 
-$(BIN)/$(EXECUTABLE): $(SOURCES)
+$(BIN)/$(EXECUTABLE): $(SRC)/$(FILE_NAME).c
 	$(CC) $(C_FLAGS) $^ -o $@ -I$(INCLUDE_PATHS) -L$(LIBRARY_PATHS) $(LIBRARIES)
 
 # Removes main and main.* folders, keeps sdl2-config:

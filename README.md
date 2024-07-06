@@ -24,3 +24,11 @@ make clean
 
 > [!TIP]
 > If VS Code is not detecting the path to SDL add them to the path by adding `"${workspaceFolder}/include"` in the Microsoft C/C++ Extension.
+
+# Examples
+
+## `main.c`
+![main.c](./screenshots/main.png)
+
+## `blank_window.c`
+![blank_window.c](./screenshots/blank_window.png)

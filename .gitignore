@@ -2,5 +2,8 @@
 .vscode
 
 # Binaries:
-bin/main.*
-bin/main
+bin/*.*
+bin/*
+
+# Keep SDL binary:
+!bin/sdl2-config

@@ -1,0 +1,6 @@
+# Editor
+.vscode
+
+# Binaries:
+bin/main.*
+bin/main

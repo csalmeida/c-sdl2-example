@@ -1,0 +1,5 @@
+CompileFlags:
+  Add:
+    - "-I./"
+    - "-I./include"
+    - "-I./include/SDL2"
